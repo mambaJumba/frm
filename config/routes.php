@@ -14,5 +14,4 @@ Router::add('/register', [
 	'action' => 'register'
 ]);
 
-
 Router::dispatch($query);

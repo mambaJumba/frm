@@ -19,7 +19,7 @@ class AuthController extends Controller
 			$user = new User();
 
 			if($user->validate($data)) {
-				echo 'ес битчес';
+				echo 'ok';
 			} else {
 				$user->getErrors('first');
 			}
