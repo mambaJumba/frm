@@ -13,6 +13,6 @@ class MainController extends Controller
 {
 	public function index()
 	{
-		echo '11';
+		echo "11";
 	}
 }

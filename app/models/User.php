@@ -15,6 +15,8 @@ class User extends Model
 		'confirm_password' => 'required|min:6|max:50|same:password'
 	];
 
-	public $messages = [];
+	public $messages = [
+		'name:required' => 'Имя обязательно'
+	];
 
 }

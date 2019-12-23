@@ -12,17 +12,17 @@ class Router {
 		self::$routes[trim($regexp, '/')] = $route;
 	}
 
-	public static function getRoutes() {
-		return self::$routes;
-	}
+	// public static function getRoutes() {
+	// 	return self::$routes;
+	// }
 
-	public static function getRoute() {
-		return self::$route;
-	}
+	// public static function getRoute() {
+	// 	return self::$route;
+	// }
 
-	public static function getParams() {
-		return self::$params;
-	}
+	// public static function getParams() {
+	// 	return self::$params;
+	// }
 
 	private static function matchRoute($url){
 		foreach (self::$routes as $pattern => $route) {
