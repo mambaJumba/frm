@@ -26,7 +26,6 @@ class TemplateHelper extends AbstractExtension implements GlobalsInterface
 
 	public function csrf_token()
 	{
-
 	}
 
 }

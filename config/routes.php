@@ -5,7 +5,8 @@ use app\core\base\Router;
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
 
 Router::add('/', [
-	'controller' => 'MainController'
+	'controller' => 'MainController',
+    'action' => 'index'
 ]);
 
 Router::add('/register', [
