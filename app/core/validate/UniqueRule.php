@@ -21,5 +21,6 @@ class UniqueRule extends Rule
 		$count = $db->table($table)->where($column, '=', $value)->count();
 
 		return intval($count) === 0;
+		
 	}
 }
