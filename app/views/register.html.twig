@@ -1,0 +1,33 @@
+{% extends 'layouts/main.html.twig' %}
+{% block title %}register{% endblock %}
+{% block main %}
+    {% if errors is not empty %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+<form method="POST" action="/register">
+    <div>
+        Name
+        <input type="text" name="name" value="{{ old.name }}">
+    </div>
+    <div>
+        Email
+        <input type="email" name="email" value="{{ old.email }}">
+    </div>
+    <div>
+        Password
+        <input type="password" name="password">
+    </div>
+    <div>
+        Confirm Password
+        <input type="password" name="confirm_password">
+    </div>
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>
+
+{% endblock %}
