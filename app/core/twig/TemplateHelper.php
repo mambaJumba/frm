@@ -1,19 +1,17 @@
 <?php
 
-namespace app\core;
+namespace app\core\twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\Extension\GlobalsInterface;
 use Twig\TwigFunction;
-
-
 
 class TemplateHelper extends AbstractExtension implements GlobalsInterface
 {
 	public function getFunctions()
 	{
 		return [
-			new TwigFunction('dump', 'dump'),
+			new TwigFunction('dump', 'dump')
 		];
 	}
 
@@ -21,8 +19,14 @@ class TemplateHelper extends AbstractExtension implements GlobalsInterface
 	{
 		return [
 			'session' => $_SESSION,
-			'errors' => isset($_SESSION['errors']) ? $_SESSION['errors'] : []
+			'errors' => isset($_SESSION['errors']) ? $_SESSION['errors'] : [],
+			'old' => isset($_SESSION['old']) ? $_SESSION['old'] : [],
 		];
+	}
+
+	public function csrf_token()
+	{
+
 	}
 
 }

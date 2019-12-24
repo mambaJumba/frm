@@ -1,9 +1,10 @@
 <?php
 
-namespace app\core;
+namespace app\core\twig;
 
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
+use app\core\twig\TemplateHelper;
 
 class TwigView
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace app\core\base;
 
 use PDO;
 
@@ -104,6 +104,15 @@ class Db
 		if (!is_null($this->offset)) $query .= $this->offset;
 
 		return $this->query($query, $this->params);
+	}
+
+	public function count()
+	{
+		$query = 'SELECT COUNT(' . $this->select . ') as count FROM ' . $this->table;
+
+		if (!is_null($this->where)) $query .= $this->where;
+
+		return $this->query($query, $this->params)[0]['count'];
 	}
 
 	public function where($where, $op = null, $val = null, $andOr = 'AND')

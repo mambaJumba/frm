@@ -1,0 +1,25 @@
+{% extends 'layouts/main.html.twig' %}
+{% block title %}login{% endblock %}
+{% block main %}
+    {% if errors is not empty %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form method="POST" action="/login">
+        <div>
+            Email
+            <input type="email" name="email" value="{{ old.email }}">
+        </div>
+        <div>
+            Password
+            <input type="password" name="password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+{% endblock %}
