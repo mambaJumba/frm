@@ -11,6 +11,8 @@ define('CFG', 'config');
 define('VIEWS', APP . '/views');
 define('WWW', 'public');
 
+require CORE . '/functions.php';
+
 spl_autoload_register(function ($class) {
 	$path = str_replace('\\', '/', $class) . '.php';
 

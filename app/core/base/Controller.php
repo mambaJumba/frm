@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace app\core\base;
 
-use app\core\TwigView;
+use app\core\twig\TwigView;
 
 abstract class Controller
 {

@@ -2,17 +2,20 @@
 
 namespace app\controllers;
 
-use app\core\Controller;
-use app\models\Main;
-
-use app\core\Db;
-use app\core\Router;
+use app\core\base\Controller;
+use app\models\User;
 
 
 class MainController extends Controller
 {
 	public function index()
 	{
-		echo "11";
+		if (isset($_POST['logout'])) {
+			unset($_SESSION['user']);
+			redirect('/');
+		}
+		//dump($_SESSION['user']);
+
+		$this->view('index');
 	}
 }
