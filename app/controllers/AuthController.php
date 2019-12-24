@@ -20,6 +20,7 @@ class AuthController extends Controller
 			$modelUser = new User();
 			$validator = new Validator();
 
+			
 			$rules = $modelUser->getRegRules();
 			$messages = $modelUser->getRegMessages();
 
