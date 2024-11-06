@@ -1,7 +1,7 @@
 {
     "require": {
         "symfony/var-dumper": "^3.4",
-        "twig/twig": "^2.7",
+        "twig/twig": "^3.11",
         "rakit/validation": "^1.1"
     }
 }
